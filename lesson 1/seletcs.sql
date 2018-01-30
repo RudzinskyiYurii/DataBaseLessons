@@ -73,4 +73,6 @@ INNER JOIN Labor_SQL.Laptop AS Laptop2 ON (Laptop1.hd = Laptop2.hd
                   AND Laptop1.model < Laptop2.model)
 ORDER BY Laptop1.model DESC*/
 
-
+SELECT country FROM Labor_SQL.Classes
+GROUP BY country
+HAVING COUNT(DISTINCT type) = 2
