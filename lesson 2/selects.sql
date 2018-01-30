@@ -57,3 +57,11 @@ WHERE type = "PC" AND EXISTS (SELECT maker FROM Product WHERE type = "Printer" A
 		CONCAT("ram:", ram) ram, CONCAT("hd:",hd) hd, CONCAT("cd:", cd) cd, CONCAT("price:", price) price FROM PC*/
 
 /*SELECT DATE_FORMAT(date, '%Y.%m.%d') FROM Income*/
+
+-- task 4
+
+/*SELECT model, price FROM Printer
+WHERE price = (SELECT MAX(price) FROM Printer)*/
+
+SELECT Product.type, Laptop.model, Laptop.speed FROM Laptop, Product
+WHERE Laptop.speed < (SELECT MIN(speed) FROM PC)
