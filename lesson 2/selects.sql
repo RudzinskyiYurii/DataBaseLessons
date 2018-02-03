@@ -64,4 +64,4 @@ WHERE type = "PC" AND EXISTS (SELECT maker FROM Product WHERE type = "Printer" A
 WHERE price = (SELECT MAX(price) FROM Printer)*/
 
 SELECT Product.type, Laptop.model, Laptop.speed FROM Laptop, Product
-WHERE Laptop.speed < (SELECT MIN(speed) FROM PC)
+WHERE Product.type = "Laptop" AND Laptop.speed < (SELECT MIN(speed) FROM PC)
