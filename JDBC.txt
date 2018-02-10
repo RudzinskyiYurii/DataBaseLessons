@@ -1,0 +1,4 @@
+I have some problem to push all folders and files recursive by git add *, 
+so to see the homework JDBC for Db family_tree follow the link below:
+
+https://github.com/RudzinskyiYurii/EpamLessons/tree/master/JDBCLesson
