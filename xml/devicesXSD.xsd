@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="devices"
+           xmlns="devices"
+           elementFormDefault="qualified">
+
+    <xs:element name = 'devices'>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name = 'device' type = 'deviceType' minOccurs = '0'
+                            maxOccurs = 'unbounded' />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name = "deviceType">
+        <xs:sequence>
+            <xs:element name = "name" type = "xs:string"/>
+            <xs:element name = "origin" type = "xs:string"/>
+            <xs:element name="price">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="types">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="peripheral" type="xs:string"/>
+                        <xs:element name="cooler" type="xs:string"/>
+                        <xs:element name="powerWAT">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:integer">
+                                    <xs:minInclusive value="0"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="accessoriesGroup">
+                            <xs:complexType>
+                                <xs:choice maxOccurs="unbounded">
+                                    <xs:element name="accessory" type="xs:string"/>
+                                </xs:choice>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="ports">
+                            <xs:complexType>
+                                <xs:choice maxOccurs="unbounded">
+                                    <xs:element name="port" type="xs:string"/>
+                                </xs:choice>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name = "critical" type = "xs:string"/>
+        </xs:sequence>
+        <xs:attribute name = 'devNO' type = 'xs:integer'/>
+    </xs:complexType>
+</xs:schema>

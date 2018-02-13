@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <?xml-stylesheet type="text/xsl" href="devicesXSL.xsl"?>
+
+<devices xmlns="devices"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="devicesXSD.xsd">
+
+    <device devNO="0">
+        <name>IBM</name>
+        <origin>UK</origin>
+        <price>40000</price>
+        <types>
+            <peripheral>yes</peripheral>
+            <cooler>yes</cooler>
+            <powerWAT>1000</powerWAT>
+            <accessoriesGroup>
+                <accessory>multimedia</accessory>
+                <accessory>inputOutput</accessory>
+            </accessoriesGroup>
+            <ports>
+                <port>COM</port>
+                <port>LPT</port>
+            </ports>
+        </types>
+        <critical>no</critical>
+    </device>
+
+    <device devNO="1">
+        <name>MultimediaPC</name>
+        <origin>USA</origin>
+        <price>30000</price>
+        <types>
+            <peripheral>yes</peripheral>
+            <cooler>yes</cooler>
+            <powerWAT>900</powerWAT>
+            <accessoriesGroup>
+                <accessory>multimedia</accessory>
+            </accessoriesGroup>
+            <ports>
+                <port>COM</port>
+                <port>USB</port>
+            </ports>
+        </types>
+        <critical>yes</critical>
+    </device>
+
+    <device devNO="2">
+        <name>ZenBook</name>
+        <origin>France</origin>
+        <price>50000</price>
+        <types>
+            <peripheral>yes</peripheral>
+            <cooler>yes</cooler>
+            <powerWAT>800</powerWAT>
+            <accessoriesGroup>
+                <accessory>multimedia</accessory>
+                <accessory>inputOutput</accessory>
+            </accessoriesGroup>
+            <ports>
+                <port>USB</port>
+                <port>LPT</port>
+            </ports>
+        </types>
+        <critical>no</critical>
+    </device>
+
+</devices>
