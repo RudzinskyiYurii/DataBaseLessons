@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet version="1.0"
+
+                xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
 
     <xsl:template match="/">
         <html>
@@ -22,15 +25,16 @@
                     background-color: #2b2b2b;
                     color: white;
                     }
+                    
 
                 </style>
             </head>
             <body>
                 <table class="tfmt">
                     <tr>
-                        <th style="width:250px">#</th>
+                        <th style="width:50px">#</th>
                         <th style="width:250px">Name</th>
-                        <th style="width:350px">Origin</th>
+                        <th style="width:250px">Origin</th>
                         <th style="width:250px">Price</th>
                         <th style="width:250px">Peripheral</th>
                         <th style="width:250px">Cooler</th>
